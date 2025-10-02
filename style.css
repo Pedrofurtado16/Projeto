@@ -7,6 +7,10 @@ body {
   */
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  background-color: #000;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
 }
 
 :root {
@@ -35,10 +39,11 @@ body {
 }
 
 #container {
-  width: 100px;
+  width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
+  overflow: hidden;
 }
 
 #profile {
@@ -101,7 +106,7 @@ ul {
   padding: 24px 0;
 }
 ul li a {
-  border: 1px solid red;
+  border: 1px solid var(--stroke-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,4 +170,9 @@ footer a {
 footer a:hover {
   text-decoration: underline; /* adiciona sublinhado no hover */
   color: rgba(255, 255, 255, 0.8); /* cor suave no hover */
+}
+@media (max-width: 600px) {
+  #container {
+    padding: 0 16px;
+  }
 }
